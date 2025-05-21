@@ -1,89 +1,122 @@
-import { useState } from 'react'
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
-import logo from "./assets/logo-1.png"
-import ban1 from "./assets/ban-1.png"
-import ball from "./assets/ball.png"
-import './index.css'
+import One from "../src/assets/one.png";
+import Two from "../src/assets/two.png";
+import Three from "../src/assets/three.png";
+import Four from "../src/assets/four.png";
+import Five from "../src/assets/five.png";
+import Six from "../src/assets/six.png";
+import Seven from "../src/assets/seven.png";
+import Eight from "../src/assets/eight.png";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import React from "react";
+// App.jsx
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Container } from "react-bootstrap";
+
+// Custom Prev Arrow
+const PrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-arrow prev" onClick={onClick}>
+      <FaChevronLeft />
+    </div>
+  );
+};
+
+// Custom Next Arrow
+const NextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-arrow next" onClick={onClick}>
+      <FaChevronRight />
+    </div>
+  );
+};
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
+  var settingsone = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
+  
 
   return (
-    <>
-         <Navbar expand="lg" className="bg-main">
-      <Container>
-        <Navbar.Brand href="#home">
-        <img src={logo} alt="logo" /></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">About</Nav.Link>
-            <Nav.Link href="#link">Service</Nav.Link>
-            <Nav.Link href="#link">Contact</Nav.Link>
-          </Nav>
-          <div className="button">
-            <button>Log in</button>
-          </div>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-
-    <section id="ban">
-  <div className="container">
-    <div className="row">
-      <div className="col-lg-5">
-        <div className="bantxt-main">
-          <div className="ban-start-up">
-            <a href="#">Startup Business</a>
-            <i className="fa-regular fa-bell"></i>
-            <div className="one"></div>
-          </div>
-          <h2>
-            Empowering startups to fuel
-            their business growth
-          </h2>
-          <p>
-            Eu posuere mi sed purus proin quisque molestie. Ut amet, at amet,
-            velit nibh arcu eu. Id sem varius malesuada tincidunt sodales.
-          </p>
-          <a className="bottom" href="#">Get started now</a>
-        </div>
-      </div>
-      <div className="col-lg-4 offset-lg-3">
-        <div className="ban-right-img">
-          <div className="img">
-            <img src={ban1} alt="ban1" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="deployment">
-  <div className="container">
-    <div className="row justify-content-sm-center">
-      {[1, 2, 3].map((item) => (
-        <div className="col-lg-4 col-md-4 col-sm-6" key={item}>
-          <div className="dep-main">
-            <div className="dep-left">
-              <img src={ball} alt="ball" />
-            </div>
-            <div className="two"></div>
-            <div className="dep-txt">
-              <h2>Immediate Deployment</h2>
-              <p>Et vero eos et accusamus et iusto odio dignissimos</p>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-      
-    </>
+ <>
+ <div className="banner">
+ <Slider {...settings}>
+ <div className="picture-div">
+<img src={One} alt="" />
+</div>
+<div className="picture-div">
+<img src={Two} alt="" />
+</div>
+<div className="picture-div">
+<img src={Three} alt="" />
+</div>
+<div className="picture-div">
+<img src={Four} alt="" />
+</div>
+<div className="picture-div">
+<img src={Five} alt="" />
+</div>
+<div className="picture-div">
+<img src={Six} alt="" />
+</div>
+<div className="picture-div">
+<img src={Seven} alt="" />
+</div>
+<div className="picture-div">
+<img src={Eight} alt="" />
+</div>
+ </Slider>
+ <Container>
+ <Slider {...settingsone}>
+<div className="picture-div">
+<img src={One} alt="" />
+</div>
+<div className="picture-div">
+<img src={Two} alt="" />
+</div>
+<div className="picture-div">
+<img src={Three} alt="" />
+</div>
+<div className="picture-div">
+<img src={Four} alt="" />
+</div>
+<div className="picture-div">
+<img src={Five} alt="" />
+</div>
+<div className="picture-div">
+<img src={Six} alt="" />
+</div>
+<div className="picture-div">
+<img src={Seven} alt="" />
+</div>
+<div className="picture-div">
+<img src={Eight} alt="" />
+</div>
+</Slider>
+ </Container>
+</div>
+  </>
   )
 }
 

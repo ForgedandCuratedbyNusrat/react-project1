@@ -1,172 +1,71 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-img{
-    vertical-align: middle;
-}
-a{
-    text-decoration: none;
-    display: inline-block;
-}
-ul{
-    list-style: none;
-}
-/* navber css start */
-.bg-main{
-    background-color: #FFFFFF;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 999;
-}
-.bg-main {
-    padding-left: 100px;
-}
-.bg-main a{
-    color: #0B0B0B !important;
-    font-family: "ABeeZee", serif;
-    font-size: 16px;
-    line-height: auto;
-    font-weight: 400;
-    padding: 0px 41px !important;
-}
-.bg-main a:hover {
-    color: #EA580C !important;            
   }
   
-
-.button button{
-    padding: 18px 40px 18px 40px;
-    border-radius: 20px;
-    background-color: #EA580C;
-    font-family: "REM", serif;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    color: #FFFFFF;
-    border: none;
-}
-
-/* navbar css end */
-/* banner css start */
-#ban{
-    padding: 150px 0px 100px 0px;
-}
-.img img{
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  img {
+    vertical-align: middle;
+    max-width: 100%; 
+    height: auto;
+    display: block; 
+  }
+  
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .banner {
+    padding: 100px 0px;
+    overflow: hidden; 
+    background-color: snow;
+  }
+  
+  .picture-div {
+    height: 400px;
     width: 100%;
-}
-.bantxt-main{
-    position: relative;
-    padding-top: 40px;
-}
-.ban-start-up a{
-    padding: 9px 9px 9px 43px;
-    border-radius: 20px;
-    font-family: "ABeeZee", serif;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 400;
-    color: #000000;
-    border: 1px solid#000000;
-    text-decoration: none;
-}
-.one{
+    padding: 0px 10px;
+    margin-bottom: 100px;
+  }
+  
+  .picture-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+  }
+  .custom-arrow {
     position: absolute;
-    left: 1px;
-    top: 41px;
-    background-color: #FAD7C4;
-    padding: 18px;
+    top: 50%;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
-.ban-start-up i{
-    position: absolute;
-    top: 47px;
-    left: 11px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .custom-arrow svg {
     font-size: 20px;
-    z-index: 1;
-}
-.bantxt-main h2{
-    font-family: "Roboto", serif;
-    font-size: 36px;
-    line-height: 45px;
-    font-weight: 500;
-    color: #09090B;
-    padding-top: 35px;
-}
-.bantxt-main p{
-    color: #000000;
-    font-family: "Roboto", serif;
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: 400;
-    padding-top: 32px;
-}
-.bantxt-main a.bottom{
-    padding: 9px 23px 9px 23px;
-    margin-top: 37px;
-    border-radius: 5px;
-    background-color: #EA580C;
-    font-family: "REM", serif;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    color: #FFFFFF;
-    text-decoration: none;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-/* banner css end */
-/* deployment css start */
-#deployment{
-    padding: 50px 0px 100px 0px;
-}
-.dep-main{
-    position: relative;
-    padding: 30px 0px 15px 0px;
-    background-color: #FDEDE8;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-}
-.dep-txt h2{
-    font-family: "Roboto", serif;
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 400;
-    color: #09090B;
-    padding-left: 150px;
-}
-.dep-txt p{
-    font-family: "Roboto", serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #71717A;
-    padding-left: 150px;
-    padding-right: 37px;
-}
-.dep-left img{
-    position: absolute;
-    top: 50px;
-    left: 40px;
-}
-.two{
-    position: absolute;
-    top: 34px;
-    left: 107px;
-    width: 2px;
-    height: 80px;
-    background-color: rgba(250, 208, 188, 1);
-}
-/* deployment css end */
+    color: #333;
+  }
+  
+  .custom-arrow.prev {
+    left: 10px;
+  }
+  
+  .custom-arrow.next {
+    right: 10px;
+  }
+  
+  
